@@ -13,7 +13,7 @@ var tmpl = `
 A very simple portknocker!!
 
 USAGE
-{{.Command}} <host> <port:protocol> <port:protocol> <options>
+{{.Command}} <options> <host> <port:protocol> <port:protocol>
 
 OPTIONS
 {{range .Options}}
