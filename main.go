@@ -3,6 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
+	"neighborhood/config"
 	"neighborhood/helpers"
 	"net"
 	"os"
@@ -57,8 +58,18 @@ func parsePort(portArgument string) (string, int) {
 }
 
 func parseArguments(args []string) []string {
+
+	var expectedFlags []string
+	for _, option := range config.Config.Options {
+		expectedFlags = append(expectedFlags, option.Flag)
+	}
+
+	joinedFlags := strings.Join(expectedFlags, "|")
+
 	argsString := strings.Join(args, ",")
-	rgx := regexp.MustCompile("-(v|h),")
+	regexString := "(\\s|,|)-(" + joinedFlags + ")(\\s|,|$|)"
+
+	rgx := regexp.MustCompile(regexString)
 	argsWithoutFlags := rgx.ReplaceAllString(argsString, "")
 
 	return strings.Split(argsWithoutFlags, ",")
