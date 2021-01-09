@@ -3,6 +3,13 @@
 
 This tool is a small golang program to perform port knocking.
 
+## Install
+```
+go mod vendor
+go build -ldflags="-s -w"
+cp neighborhood /bin # or another binary folder
+```
+
 ## Usage
 
 ```
