@@ -4,14 +4,15 @@
 This tool is a small golang program to perform port knocking.
 
 ## Requires
-Golang 1.15 +
+[GO](https://golang.org/dl/) is required to develop or to compile source code. 
+Otherwise you can simple download the latest release.
 
 ## Install
 After cloning or downloading the repository, follow these istructions
 ```
 go mod vendor
 go build -ldflags "-s -w"
-cp neighborhood /bin # or another binary folder
+mv neighborhood /bin # or another binary folder
 ```
 
 You can also download the latest release binary.
