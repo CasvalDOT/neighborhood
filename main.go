@@ -3,6 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
+	"neighborhood/helpers"
 	"net"
 	"os"
 	"regexp"
@@ -57,7 +58,7 @@ func parsePort(portArgument string) (string, int) {
 
 func parseArguments(args []string) []string {
 	argsString := strings.Join(args, ",")
-	rgx := regexp.MustCompile("-v,")
+	rgx := regexp.MustCompile("-(v|h),")
 	argsWithoutFlags := rgx.ReplaceAllString(argsString, "")
 
 	return strings.Split(argsWithoutFlags, ",")
@@ -70,7 +71,13 @@ func main() {
 	arguments := os.Args
 
 	isVerbose := flag.Bool("v", false, "")
+	showHelp := flag.Bool("h", false, "")
 	flag.Parse()
+
+	if *showHelp == true {
+		helpers.Man()
+		os.Exit(0)
+	}
 
 	args := parseArguments(arguments[1:])
 	if len(args) < 2 {
