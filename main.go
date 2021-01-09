@@ -58,7 +58,6 @@ func parsePort(portArgument string) (string, int) {
 }
 
 func parseArguments(args []string) []string {
-
 	var expectedFlags []string
 	for _, option := range config.Config.Options {
 		expectedFlags = append(expectedFlags, option.Flag)
