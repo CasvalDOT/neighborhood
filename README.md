@@ -4,6 +4,7 @@
 This tool is a small golang program to perform port knocking.
 
 ## Install
+After cloning or downloading the repository, follow these istructions
 ```
 go mod vendor
 go build -ldflags="-s -w"
