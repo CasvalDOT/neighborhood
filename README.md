@@ -24,3 +24,14 @@ neighborhood -v <host> <port:protocol> <port:protocol>
 # 80 81:tcp
 
 ```
+## Have you found a bug?
+
+Please open a new issue on:
+
+https://github.com/CasvalDOT/neighborhood/issues
+
+## License
+
+Copyright (c) Fabrizio Gortani
+
+[MIT License](http://en.wikipedia.org/wiki/MIT_License)
