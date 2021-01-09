@@ -14,6 +14,8 @@ go build -ldflags "-s -w"
 cp neighborhood /bin # or another binary folder
 ```
 
+You can also download the latest release binary.
+
 ## Usage
 
 ```
