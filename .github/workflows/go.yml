@@ -26,4 +26,8 @@ jobs:
       
     - name: Go Release Binaries
       uses: wangyoucao577/go-release-action@v1.12
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        goos: ${{ matrix.goos }}
+        goarch: ${{ matrix.goarch }}
 
