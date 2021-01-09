@@ -3,6 +3,9 @@
 
 This tool is a small golang program to perform port knocking.
 
+## Requires
+Golang 1.15 +
+
 ## Install
 After cloning or downloading the repository, follow these istructions
 ```
