@@ -33,6 +33,10 @@ Please open a new issue on:
 
 https://github.com/CasvalDOT/neighborhood/issues
 
+## Support the project
+If you want, you can also freely donate to fund the project development!
+[donate](https://paypal.me/FGortani)
+
 ## License
 
 Copyright (c) Fabrizio Gortani
