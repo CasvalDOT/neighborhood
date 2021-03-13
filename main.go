@@ -102,7 +102,14 @@ func main() {
 		proto, port := parsePort(p)
 		probe(host, proto, port)
 		if *isVerbose == true {
-			fmt.Println("PROBE:", proto, "->", host, ":", port)
+			fmt.Println(
+				"PROBE:",
+				helpers.Colorize(proto, "red"),
+				"->",
+				helpers.Colorize(host, "green"),
+				":",
+				helpers.Colorize(strconv.Itoa(port), "yellow"),
+			)
 		}
 	}
 
